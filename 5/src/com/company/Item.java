@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Item {
 
     int cost, size;
@@ -13,4 +15,5 @@ public class Item {
     public Item(int cost, int size)
     {
     }
+
 }

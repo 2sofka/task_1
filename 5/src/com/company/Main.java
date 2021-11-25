@@ -11,25 +11,16 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Case safe = new Case();
         safe.resize(scanner.nextInt());
-        ArrayList<Item> items = new ArrayList<>(scanner.nextInt());
-        ArrayList<Item> BestItems = new ArrayList<>();
-        for (int i = 0; i < items.size(); i++)
-            items.add(new Item(scanner.nextInt(),scanner.nextInt()));
-
-        int i = 0;
-        while (i<items.size())
-        {
-            int j = 0;
-            while(j < items.size())
-            {
-
-
-            }
-
-
-
-
+        ArrayList<Item> items = new ArrayList<>();
+        int howManyItems = scanner.nextInt();
+        for (int i = 0; i < howManyItems; i++) {
+            items.add(new Item(0, 0));
+            items.get(items.size()-1).SetCost(scanner.nextInt());
+            items.get(items.size()-1).SetSize(scanner.nextInt());
         }
+
+
+        safe.Solution(items);
 
 
     }
